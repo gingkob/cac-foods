@@ -49,4 +49,22 @@ html {
   transition: ease-in 1.5s;
 }
 
+/* .stop-watch {
+  position  : absolute;
+  top       : 10%;
+  text-align: center;
+  width     : 100%;
+}
+
+.stop-watch p {
+  text-align: center;
+  font-size : 10rem;
+}
+
+.stop-watch button {
+  width  : 80px;
+  padding: 4px 12px;
+  margin : 4px;
+} */
+
 /* End of Section 1 */
