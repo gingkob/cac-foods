@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
 
+:root {
+  --primary-color: #a79a2d;
+}
+
 /* Common styles */
 * {
   margin         : 0;
@@ -15,6 +19,14 @@ html {
   font-size: 62.5%;
 }
 
+.section-heading {
+  font-size     : 12rem;
+  font-weight   : 900;
+  text-shadow   : 0.2rem 0.2rem 0.1rem #ddd;
+  text-align    : center;
+  letter-spacing: 0.5rem;
+}
+
 /* End of Common styles */
 /* Section 1 */
 .section-1 {
@@ -27,20 +39,12 @@ html {
   align-items     : center;
 }
 
-.section-heading {
-  font-size     : 12rem;
-  font-weight   : 900;
-  text-shadow   : 0.3rem 0.3rem 0.3rem #eee;
-  text-align    : center;
-  letter-spacing: 0.5rem;
-}
-
 .section-1-icons i {
-  color      : #a79a2d;
+  color      : var(--primary-color);
   font-size  : 35rem;
   position   : absolute;
   transform  : translate(-50%, -50%) scale(0);
-  text-shadow: 0.3rem 0.3rem 0.3rem #333;
+  text-shadow: 0.3rem 0.3rem 0.1rem #333;
   transition : ease-out 0.5s;
 }
 
@@ -49,6 +53,98 @@ html {
   transition: ease-in 1.5s;
 }
 
+/* End of Section 1 */
+
+/* Section 2 */
+.section-2 {
+  width           : 100%;
+  height          : 100vh;
+  background-color: #333;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+  padding         : 10rem 0;
+}
+
+.cards-container {
+  display        : flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width                 : 30rem;
+  display               : flex;
+  flex-direction        : column;
+  justify-content       : space-between;
+  align-items           : center;
+  gap                   : 2rem;
+  /* text-align         : center; */
+  background-color      : var(--primary-color);
+  padding               : 4rem;
+  box-shadow            : -1.5rem -1.5rem 2.5rem #504c27;
+  position              : relative;
+  transform             : rotateY(20deg) skewX(-2deg);
+  transition            : transform .5s, box-shadow .5s;
+}
+
+.card:hover {
+  cursor    : pointer;
+  transform : rotateY(20deg) skewX(-2deg) translateY(-3rem);
+  box-shadow: -3.5rem -2.5rem 2.5rem #22200d;
+}
+
+.card::before {
+  content            : '';
+  height             : 100%;
+  width              : 1rem;
+  background-color   : #504c27;
+  position           : absolute;
+  top                : 0;
+  left               : -1rem;
+  /* transform       : translate(50%); */
+  transform          : skewY(45deg);
+  transform-origin   : right;
+  box-shadow         : -0.1rem -0.1rem 0.1rem black;
+}
+
+.card::after {
+  content            : '';
+  height             : 1rem;
+  width              : 100%;
+  background-color   : #ada44c;
+  position           : absolute;
+  top                : -1rem;
+  left               : 0;
+  /* transform       : translate(50%); */
+  transform          : skewX(45deg);
+  transform-origin   : bottom;
+  box-shadow         : -0.1rem -0.1rem 0.1rem black;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-name {
+  font-size     : 3rem;
+  font-weight   : 900;
+  letter-spacing: 0.25rem;
+  color         : #111;
+  text-shadow   : 0.05rem 0.05rem 0rem #aaa;
+}
+
+.card-btn {
+  width           : 100%;
+  padding         : 0.75rem 1.5rem;
+  background-color: #333;
+  color           : #ddd;
+  border          : none;
+  font-size       : 1.5rem;
+  border-radius   : 2.5rem;
+  box-shadow      : 0rem 0.25rem 0rem #504c27;
+}
+
+/* End of Section 2 */
 /* .stop-watch {
   position  : absolute;
   top       : 10%;
@@ -66,5 +162,3 @@ html {
   padding: 4px 12px;
   margin : 4px;
 } */
-
-/* End of Section 1 */
