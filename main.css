@@ -105,6 +105,7 @@ html {
   transform          : skewY(45deg);
   transform-origin   : right;
   box-shadow         : -0.1rem -0.1rem 0.1rem black;
+  transition         : all 0.5s;
 }
 
 .card::after {
@@ -119,6 +120,17 @@ html {
   transform          : skewX(45deg);
   transform-origin   : bottom;
   box-shadow         : -0.1rem -0.1rem 0.1rem black;
+  transition         : all 0.5s;
+}
+
+.card:hover::before {
+  width: 0.35rem;
+  left : -0.35rem;
+}
+
+.card:hover::after {
+  height: 0.35rem;
+  top   : -0.35rem;
 }
 
 .card-img {
