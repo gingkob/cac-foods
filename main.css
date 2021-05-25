@@ -89,8 +89,8 @@ html {
 
 .card:hover {
   cursor    : pointer;
-  transform : rotateY(20deg) skewX(-2deg) translateY(-3rem);
-  box-shadow: -3.5rem -2.5rem 2.5rem #22200d;
+  transform : rotate(-0.5deg) skewX(1deg) translateY(-3rem) scale(1.05);
+  box-shadow: -3.5rem -2.5rem 2.5rem #413d1e;
 }
 
 .card::before {
